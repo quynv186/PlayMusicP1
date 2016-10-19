@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayMusicP1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="miniVolume.png" maximumValueImage="maxVolume.png" translatesAutoresizingMaskIntoConstraints="NO" id="56o-tI-KNm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="GuF-55-Cn1"/>
+                                    <constraint firstAttribute="height" constant="30" id="Opt-iG-gqa"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sld_Volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="PjM-ul-GHv"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrS-1l-tv2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="7rg-w5-YzF"/>
+                                    <constraint firstAttribute="height" constant="30" id="RGF-q2-5mr"/>
+                                </constraints>
+                                <state key="normal" image="play.png"/>
+                                <connections>
+                                    <action selector="action_Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmW-M0-O7U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="56o-tI-KNm" firstAttribute="top" secondItem="CrS-1l-tv2" secondAttribute="bottom" constant="8" id="72Q-xU-HIP"/>
+                            <constraint firstItem="56o-tI-KNm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KLv-Mx-LFs"/>
+                            <constraint firstItem="CrS-1l-tv2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEX-FY-IL1"/>
+                            <constraint firstItem="56o-tI-KNm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eGP-X1-705"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_Play" destination="CrS-1l-tv2" id="Sei-vE-Zjc"/>
+                        <outlet property="sld_Volume" destination="56o-tI-KNm" id="yqD-bi-PpA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maxVolume.png" width="30" height="30"/>
+        <image name="miniVolume.png" width="30" height="30"/>
+        <image name="play.png" width="256" height="256"/>
+    </resources>
+</document>
